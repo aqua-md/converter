@@ -71,8 +71,8 @@ impl LiveSplitFile {
                     };
 
                     // Get best segment .
-                    let elm_best_segment = elm_segment.opt("BestSegmentTime").element();
-                    let best_segment = match elm_best_segment {
+                    let elm_best_segments = elm_segment.opt("BestSegmentTime").element();
+                    let best_segment = match elm_best_segments {
                         Some(elm_best_segment) => {
                             let elm_real_time = elm_best_segment.opt("RealTime").element();
                             match elm_real_time {
